@@ -1,0 +1,350 @@
+body {
+    margin: 0;
+    overflow: hidden;
+    background-color: black;
+}
+
+/* --------------------------------------Main area---------------------------------------------- */
+#main-container {
+    position: relative;
+    height: 100vh;
+    /* background-color: green; */
+}
+
+#main-container-background {
+    position: absolute;
+    background: url('./assets/backgrounds/Cartoon_Forest_BG_02.png');
+    height: 100vh;
+    width: 100vw;
+    background-size: cover;
+    background-repeat: none;
+    filter: brightness(60%);
+
+}
+
+#button-play,
+#clear-local {
+    position: absolute;
+    height: 4em;
+    border-radius: 5em;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#button-play {
+    width: 20em;
+    background: rgba(0, 0, 0, 0.5);
+    /* background: greenyellow; */
+    color: greenyellow;
+    border: solid greenyellow 1px;
+    box-shadow: greenyellow 3px 2px;
+}
+
+#clear-local {
+    width: 10em;
+    background: rgba(0, 0, 0, 0.5);
+    color: rgb(255, 47, 47);
+    border: solid rgb(255, 47, 47) 1px;
+    box-shadow: rgb(255, 47, 47) 3px 2px;
+    margin-top: 10em;
+}
+
+#button-play:hover,
+#clear-local:hover {
+    transform: translate(-50%, -50%) scale(1.05);
+}
+
+#button-play:active,
+#clear-local:active {
+    transform: translate(-50%, -50%) scale(0.95);
+}
+
+
+
+#player-status {
+    position: absolute;
+    right: 2em;
+    top: 2em;
+    height: 7.5em;
+    width: 20em;
+}
+
+#player-status-container {
+    position: relative;
+    height: 7.5em;
+    width: 20em;
+    border-radius: 2em;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: gold;
+    border: solid gold 1px;
+    box-shadow: gold 3px 2px 1px;
+}
+
+#player-name {
+    height: 3em;
+    width: 20em;
+    text-align: center;
+    align-content: center;
+    font-weight: bold;
+    /* background-color: rgb(241, 181, 0); */
+    border-top-right-radius: 2em;
+    border-top-left-radius: 2em;
+
+}
+
+#player-exp-text {
+    height: 1.5em;
+    width: 10em;
+    background-color: hsla(0, 0%, 0%, 0.8);
+    float: left;
+    text-align: center;
+    align-content: center;
+}
+
+#player-exp-value {
+    height: 3em;
+    width: 10em;
+    /* background-color: rgb(151, 113, 255); */
+    border-bottom-left-radius: 2em;
+    float: left;
+    text-align: center;
+    align-content: center;
+}
+
+
+#player-level-text {
+    height: 1.5em;
+    width: 10em;
+    background-color: hsla(0, 0%, 0%, 0.8);
+    right: 0;
+    float: right;
+    text-align: center;
+    align-content: center;
+}
+
+#player-level-value {
+    height: 3em;
+    width: 10em;
+    /* background-color: rgb(255, 115, 115); */
+    border-bottom-right-radius: 2em;
+    float: right;
+    text-align: center;
+    align-content: center;
+}
+
+
+
+
+/* ------------------------------------------------------skills---------------------------------------------------- */
+#skills-info-activate {
+    position: absolute;
+    height: 7em;
+    width: 7em;
+    /* background: url('./assets/skills/skills_icon_dark.png'); */
+    border: solid gold 1px;
+    background-color: rgba(0, 0, 0, 0.5);
+    background-position: center;
+    background-size: cover;
+    /* filter: brightness(50%); */
+    color: gold;
+    font-weight: bold;
+    right: 2em;
+    top: 16em;
+    border-radius: 9em;
+    cursor: pointer;
+    box-shadow: gold 3px 2px 1px;
+}
+
+#skills-info-activate:hover {
+    transform: translate(1px, 1px);
+    box-shadow: gold 2px 1px;
+}
+
+#skills-info-activate:active {
+    transform: translate(2px, 2px);
+    box-shadow: gold 0px 0px;
+}
+
+#skills-info {
+    position: absolute;
+    height: 37em;
+    width: 30em;
+    background-color: rgb(143, 134, 68);
+    top: 56%;
+    transform: translateY(-50%);
+    border-radius: 2em;
+    transition: 0.15s;
+    box-sizing: border-box;
+
+}
+
+.skills-info-notopened {
+    /* display: none; */
+    right: 100%;
+    opacity: 1;
+}
+
+.skills-info-opened {
+    /* display: block; */
+    opacity: 1;
+    right: 0%;
+}
+
+#skills-info-container {
+    position: relative;
+    height: 37em;
+    /* width: 30em; */
+    width: auto;
+    padding-left: 2.5em;
+    padding-top: 2.5em;
+}
+
+#skills-info-back {
+    position: absolute;
+    height: 2em;
+    width: 2em;
+    background-color: rgb(163, 106, 0);
+    color: white;
+    top: 5%;
+    right: 2em;
+    transform: translateY(-50%);
+    border-radius: 2em;
+}
+
+#normal-attack-info {
+    /* position: absolute; */
+    height: 5em;
+    width: 25em;
+    background-color: rgb(155, 148, 97);
+    /* top: 0%; */
+    /* left: 40%; */
+    /* transform: translate(-50%, 50%); */
+    border: solid rgb(0, 141, 82) 2px;
+    border-radius: 3vh;
+}
+
+#normal-attack-icon {
+    background: url('./assets/skills/normal_attack.png');
+    background-size: contain;
+}
+
+#shadow-step-info {
+    /* position: absolute; */
+    height: 5em;
+    width: 25em;
+    background-color: rgb(155, 148, 97);
+    /* top: 15%; */
+    /* left: 40%; */
+    /* transform: translate(-50%, 50%); */
+    border: solid rgb(0, 141, 82) 2px;
+    border-radius: 3vh;
+}
+
+#shadow-step-icon {
+    background: url('./assets/skills/shadow_step.png');
+    background-size: contain;
+}
+
+#magic-fire-info {
+    /* position: absolute; */
+    height: 5em;
+    width: 25em;
+    background-color: rgb(155, 148, 97);
+    /* top: 30%; */
+    /* left: 40%; */
+    /* transform: translate(-50%, 50%); */
+    border: solid rgb(0, 141, 82) 2px;
+    border-radius: 3vh;
+}
+
+#magic-fire-icon {
+    background: url('./assets/skills/magic_fire.png');
+    background-size: contain;
+}
+
+#magic-thunder-info {
+    /* position: absolute; */
+    height: 5em;
+    width: 25em;
+    background-color: rgb(155, 148, 97);
+    /* top: 45%; */
+    /* left: 40%; */
+    /* transform: translate(-50%, 50%); */
+    border: solid rgb(0, 141, 82) 2px;
+    border-radius: 3vh;
+}
+
+#magic-thunder-icon {
+    background: url('./assets/skills/magic_thunder.png');
+    background-size: contain;
+}
+
+#dragon-killer-info {
+    /* position: absolute; */
+    height: 5em;
+    width: 25em;
+    background-color: rgb(155, 148, 97);
+    /* top: 60%; */
+    /* left: 40%; */
+    /* transform: translate(-50%, 50%); */
+    border: solid rgb(0, 141, 82) 2px;
+    border-radius: 3vh;
+}
+
+#dragon-killer-icon {
+    background: url('./assets/skills/dragon_killer.png');
+    background-size: contain;
+}
+
+.skill-item {
+    margin-top: 1em;
+}
+
+.desc-info-container {
+    position: relative;
+    height: 5em;
+    width: 25em;
+}
+
+.skills-info-icon {
+    /* position: absolute; */
+    height: 4em;
+    width: 4em;
+    border-radius: 4em;
+    margin: 0.5em 1em;
+    /* top: 50%; */
+    /* left: 10%; */
+    /* transform: translate(-50%, -50%); */
+}
+
+.skills-info-text {
+    position: absolute;
+    height: 5em;
+    width: 17em;
+    /* background-color: green; */
+    right: 5%;
+    top: 10%;
+}
+
+.skills-info-name {
+    width: 18vw;
+    /* background-color: red; */
+    font-size: 0.9em;
+}
+
+.skills-info-description {
+    width: 17em;
+    /* background-color: white; */
+    font-size: 0.7em;
+    /* word-wrap: break-word; */
+}
+
+@media screen and (max-width: 1000px) {
+    #skills-info {
+        font-size: 0.5em;
+    }
+
+}

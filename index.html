@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="orientation.css">
+    <link rel="stylesheet" href="index.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Knightventure: Chronicles</title>
+</head>
+
+<body>
+    <div class="rotation-request">
+        <div class="rotation-request-image"></div>
+        <div>Please rotate your device</div>
+    </div>
+    <div id="main">
+        <!-- container position relative untuk menampung content yang absolute -->
+        <div id="main-container">
+            <div id="main-container-background"></div>
+
+
+            <a href="./href/stages.html">
+                <button id="button-play">
+                    PLAY
+                </button>
+            </a>
+            <button id="clear-local">
+                Clear data
+            </button>
+
+            <div id="player-status">
+                <div id="player-status-container">
+                    <div id="player-name">
+                        Sir Aldric
+                    </div>
+                    <div id="player-exp-text">Exp</div>
+                    <div id="player-level-text">Level</div>
+                    <div id="player-exp-value">0</div>
+                    <div id="player-level-value">0</div>
+                </div>
+
+            </div>
+
+            <button id="skills-info-activate">SKILLS</button>
+            <div id="skills-info" class="skills-info-notopened">
+                <div id="skills-info-container">
+                    <button id="skills-info-back">x</button>
+                    <div id="normal-attack-info" class="skill-item">
+                        <div class="desc-info-container">
+                            <div id="normal-attack-icon" class="skills-info-icon"></div>
+                            <div class="skills-info-text">
+                                <div class="skills-info-name">
+                                    Normal Attack
+                                </div>
+                                <div class="skills-info-description">
+                                    Normal attack has damage between 0-100. Unlocked when Knight level 1.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="shadow-step-info" class="skill-item">
+                        <div class="desc-info-container">
+                            <div id="shadow-step-icon" class="skills-info-icon"></div>
+                            <div class="skills-info-text">
+                                <div class="skills-info-name">
+                                    Shadow Step
+                                </div>
+                                <div class="skills-info-description">
+                                    Shadow step has damage between 0-300. Unlocked when Knight level 3.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="magic-fire-info" class="skill-item">
+                        <div class="desc-info-container">
+                            <div id="magic-fire-icon" class="skills-info-icon"></div>
+                            <div class="skills-info-text">
+                                <div class="skills-info-name">
+                                    Magic Fire
+                                </div>
+                                <div class="skills-info-description">
+                                    Normal attack has damage between 0-1000. Unlocked when Knight level 10.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="magic-thunder-info" class="skill-item">
+                        <div class="desc-info-container">
+                            <div id="magic-thunder-icon" class="skills-info-icon"></div>
+                            <div class="skills-info-text">
+                                <div class="skills-info-name">
+                                    Magic Thunder
+                                </div>
+                                <div class="skills-info-description">
+                                    Normal attack has damage between 0-1500. Unlocked when Knight level 13.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="dragon-killer-info" class="skill-item">
+                        <div class="desc-info-container">
+                            <div id="dragon-killer-icon" class="skills-info-icon"></div>
+                            <div class="skills-info-text">
+                                <div class="skills-info-name">
+                                    Dragon Killer
+                                </div>
+                                <div class="skills-info-description">
+                                    Normal attack has damage between 0-3000. Unlocked when Knight level 24.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+        <script src="index.js"></script>
+</body>
+
+</html>

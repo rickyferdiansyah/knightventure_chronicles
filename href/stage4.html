@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="../orientation.css">
+    <link rel="stylesheet" href="../assets/css/stage4.css">
+    <link rel="stylesheet" href="../assets/css/game.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="rotation-request">
+        <div class="rotation-request-image"></div>
+        <div>Please rotate your device</div>
+    </div>
+    <div id="main" class="main">
+        <!-- container position relative untuk menampung content yang absolute -->
+        <div id="main-container">
+            <div id="main-container-background"></div>
+            <!-- characters -->
+
+            <div id="character-player" class="character-player-idle">
+                <div id="character-player-container">
+                    <div id="character-player-container-shadow"></div>
+                </div>
+            </div>
+
+            <div id="character-player-effect">
+                <div id="character-player-magicFire"></div>
+            </div>
+
+            <div id="character-computer" class="character-computer-idle">
+                <div id="character-computer-container">
+                    <div id="character-computer-container-shadow"></div>
+                </div>
+            </div>
+
+            <div id="additional1-container-background"></div>
+            <div id="additional2-container-background"></div>
+
+            <!-- hitpoints -->
+            <div id="main-container-hitpoints">
+                <div id="main-container-hitpoint-player">HP: <span id="main-container-hitpoint-player-value">100</span>
+                </div>
+                <div id="main-container-hitpoint-computer">HP: <span id="main-container-hitpoint-computer-value"></span>
+                </div>
+                <div id="main-container-manapoint-player">MP: <span id="main-container-manapoint-player-value"></span>
+                </div>
+                <div id="main-container-manapoint-computer">MP: <span
+                        id="main-container-manapoint-computer-value">Unknown</span>
+                </div>
+            </div>
+
+
+            <div id="main-controller">
+                <button id="button-normal-attack"></button>
+                <button id="button-shadow-step"></button>
+                <button id="button-magic-fire"></button>
+                <button id="button-magic-thunder"></button>
+                <button id="button-dragon-killer"></button>
+            </div>
+        </div>
+        <a href="../index.html" id="home">
+            <button id="home-button">HOME</button>
+        </a>
+
+        <div id="battle-report-background">
+            <div id="battle-report-container">
+                <div id="battle-report-message">
+                    <div id="battle-report-message-container">
+                        <span id="battle-report-result"></span>
+                        <span id="battle-report-exp-container">Exp: +<span id="battle-report-exp"></span></span>
+                        <a href="./stages.html" id="back">
+                            <button id="back-to-stages">Back</button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="../assets/js/playerSpec.js"></script>
+    <script src="../assets/js/stage4.js"></script>
+    <script src="../assets/js/game.js"></script>
+</body>
+
+</html>

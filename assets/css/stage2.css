@@ -1,0 +1,32 @@
+#main-container-background {
+    background: url('../backgrounds/Cartoon_Forest_BG_02.png');
+}
+
+#additional1-container-background,
+#additional2-container-background {
+    background: url('../backgrounds/Ground.png');
+}
+
+.character-player-idle {
+    background: url('../characters/aldric/aldric-idle.png');
+}
+
+.character-player-normalAttack {
+    background: url('../characters/aldric/aldric-normalAttack.png');
+}
+
+.character-player-shadowStep {
+    background: url('../characters/aldric/aldric-normalAttack.png');
+}
+
+.character-player-magicFire {
+    background: url('../effects/character-effect-fire.png');
+}
+
+.character-computer-idle {
+    background: url('../characters/ghost-2/ghost-2-idle.png');
+}
+
+.character-computer-normalAttack {
+    background: url('../characters/ghost-1/ghost-1-normalAttack.png');
+}

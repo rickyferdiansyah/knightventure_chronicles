@@ -1,0 +1,119 @@
+body {
+    margin: 0;
+    overflow: hidden;
+}
+
+/* --------------------------------------Main area---------------------------------------------- */
+#main-container {
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+    /* background-color: green; */
+}
+
+#main-container-background {
+    position: absolute;
+    background: url('../backgrounds/Cartoon_Forest_BG_02.png');
+    height: 100vh;
+    width: 100vw;
+    background-size: cover;
+    background-repeat: none;
+    filter: brightness(60%) blur(3px);
+    transform: scale(1.01);
+}
+
+#text-container {
+    position: absolute;
+    top: 20%;
+    /* padding-top: 7vh; */
+    height: 15vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+p {
+    margin: 0;
+    color: rgb(0, 207, 93);
+    font-size: 2em;
+    white-space: nowrap;
+}
+
+
+
+
+#stages-list {
+    position: absolute;
+    top: 40%;
+    display: flex;
+    width: 50vw;
+    margin-left: 25vw;
+    justify-content: center;
+}
+
+#button-stage1,
+#button-stage2,
+#button-stage3,
+#button-stage4 {
+    margin: 0 2em;
+    height: 12vh;
+    width: 12vh;
+    background: rgba(0, 0, 0, 0.5);
+    color: greenyellow;
+    border: solid greenyellow;
+    border-radius: 1vh;
+    box-shadow: greenyellow 3px 2px;
+}
+
+
+
+#button-stage1:hover,
+#button-stage2:hover,
+#button-stage3:hover,
+#button-stage4:hover {
+    transform: scale(1.05);
+}
+
+#button-stage1:active,
+#button-stage2:active,
+#button-stage3:active,
+#button-stage4:active {
+    transform: scale(0.95);
+}
+
+.link-stage4 {
+    pointer-events: none;
+    filter: grayscale(1);
+}
+
+#back-container {
+    position: absolute;
+    bottom: 15%;
+    /* left: 50%; */
+    transform: translateY(-50%);
+    /* margin-top: 5vh; */
+    width: 100%;
+    text-align: center;
+}
+
+
+#back-button {
+    /* position: absolute; */
+    height: 6vh;
+    width: 15vh;
+    border-radius: 5vh;
+    background: rgba(0, 0, 0, 0.5);
+    color: rgb(255, 98, 0);
+    border: solid rgb(255, 98, 0) 1px;
+    box-shadow: rgb(255, 98, 0) 3px 2px;
+    z-index: 99;
+}
+
+#back-button:hover {
+    transform: scale(1.05);
+}
+
+#back-button:active {
+    transform: scale(0.95);
+}

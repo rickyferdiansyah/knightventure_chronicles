@@ -1,0 +1,534 @@
+body {
+    margin: 0;
+    overflow: hidden;
+}
+
+/* --------------------------------------Main area---------------------------------------------- */
+#main-container {
+    position: relative;
+    height: 100vh;
+    background-color: rgb(0, 87, 41);
+}
+
+#main-container-hitpoints {
+    position: relative;
+    height: 20vh;
+    width: 100vw;
+    background: rgba(11, 11, 11, 0.326);
+}
+
+#main-container-hitpoint-player,
+#main-container-hitpoint-computer {
+    position: absolute;
+    color: white;
+    font-size: 2em;
+    font-weight: bold;
+}
+
+#main-container-manapoint-player,
+#main-container-manapoint-computer {
+    position: absolute;
+    margin-top: 2vh;
+    color: white;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+#main-container-hitpoint-player {
+    left: 10vw;
+    top: 40%;
+    transform: translateY(-50%);
+}
+
+#main-container-hitpoint-computer {
+    right: 10vw;
+    top: 40%;
+    transform: translateY(-50%);
+}
+
+#main-container-manapoint-player {
+    left: 10vw;
+    top: 60%;
+    transform: translateY(-50%);
+}
+
+#main-container-manapoint-computer {
+    right: 10vw;
+    top: 60%;
+    transform: translateY(-50%);
+}
+
+#main-container-background {
+    position: absolute;
+    /* background: url('../backgrounds/Cartoon_Forest_BG_01.png'); */
+    height: 100vh;
+    width: 100vw;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 0vh -20vh;
+    filter: brightness(70%);
+    overflow: hidden;
+
+}
+
+#additional1-container-background,
+#additional2-container-background {
+    position: absolute;
+    /* background: url('../backgrounds/Ground.png'); */
+    height: 110vh;
+    width: 100vw;
+    background-size: cover;
+    background-repeat: repeat;
+    filter: brightness(70%);
+}
+
+#additional1-container-background {
+    background-position: bottom;
+    bottom: 10vh;
+}
+
+#additional2-container-background {
+    background-position: bottom;
+    bottom: 0vh;
+    height: 150vh;
+}
+
+/* -------------------------------characters--------------------------------------- */
+#character-player {
+    position: absolute;
+    height: 50vh;
+    width: 90vh;
+    background-size: auto 100%;
+    bottom: 7vh;
+    left: -10vw;
+}
+
+.character-player-idle {
+    /* background: url('../characters/aldric/aldric-idle.png'); */
+    animation: playerIdle 1s steps(10) infinite;
+}
+
+.character-player-normalAttack {
+    /* background: url('../characters/aldric/aldric-normalAttack.png'); */
+    animation: playerNormalAttackPosition 1.5s 1,
+        playerNormalAttack 1.5s steps(10) 1;
+    z-index: 99;
+}
+
+.character-player-shadowStep {
+    /* background: url('../characters/aldric/aldric-normalAttack.png'); */
+    animation: playerShadowStepPosition 1.5s 1,
+        playerShadowStep 1.5s steps(10) 1;
+    z-index: 99;
+}
+
+
+
+.character-player-effect {
+    position: absolute;
+    height: 400px;
+    width: 400px;
+    background-size: auto 100%;
+    bottom: 20vh;
+    right: 0vw;
+}
+
+.character-player-magicFire {
+    /* background: url('../effects/character-effect-fire.png'); */
+    animation: playerEffectFire 1s steps(6) 60;
+    z-index: 99;
+}
+
+
+
+#character-computer {
+    position: absolute;
+    height: 50vh;
+    width: 61.9vh;
+    background-size: auto 100%;
+    bottom: 10vh;
+    right: 0vw;
+    transform: rotateY(180deg);
+}
+
+.character-computer-idle {
+    /* background: url('../characters/ghost-1/ghost-1-idle.png'); */
+    animation: computerIdle 1.5s steps(12) infinite;
+}
+
+.character-computer-normalAttack {
+    /* background: url('../characters/ghost-1/ghost-1-normalAttack.png'); */
+    animation: computerNormalAttackPosition 1.5s 1,
+        computerNormalAttack 1.5s steps(12) 1;
+    /* transform: scaleX(-1); */
+    z-index: 99;
+}
+
+
+
+
+@keyframes playerIdle {
+    0% {
+        background-position: 0%;
+    }
+
+    100% {
+        background-position: 1000%;
+    }
+}
+
+@keyframes playerNormalAttack {
+    0% {
+        background-position: 0%;
+    }
+
+    50% {
+        background-position: 1000%;
+    }
+
+    51% {
+        background-position: 0%;
+    }
+
+    100% {
+        background-position: 1000%;
+    }
+}
+
+@keyframes playerNormalAttackPosition {
+    20% {
+        left: 50vw;
+    }
+
+    80% {
+        left: 50vw;
+    }
+}
+
+@keyframes playerShadowStep {
+
+    0%,
+    40%,
+    80% {
+        background-position: 0%;
+
+    }
+
+    20%,
+    60%,
+    100% {
+        background-position: 1000%;
+
+    }
+}
+
+@keyframes playerShadowStepPosition {
+
+    10%,
+    26%,
+    30%,
+    36%,
+    40%,
+    46%,
+    50%,
+    56%,
+    60%,
+    66%,
+    70%,
+    76%,
+    80%,
+    86%,
+    90%,
+    96%,
+    100% {
+        left: 45vw;
+        transform: rotateY(0deg);
+    }
+
+    21%,
+    25%,
+    31%,
+    35%,
+    41%,
+    45%,
+    51%,
+    55%,
+    61%,
+    65%,
+    71%,
+    75%,
+    81%,
+    85%,
+    91%,
+    95% {
+        left: 75vw;
+        transform: rotateY(180deg);
+    }
+}
+
+@keyframes playerJump {
+    0% {
+        background-position: 0%;
+    }
+
+    100% {
+        background-position: 1000%;
+    }
+}
+
+@keyframes playerEffectFire {
+    0% {
+        background-position: 0%;
+    }
+
+    100% {
+        background-position: 600%;
+    }
+}
+
+
+
+
+
+
+@keyframes computerIdle {
+    0% {
+        background-position: 0%;
+    }
+
+    100% {
+        background-position: 1200%;
+    }
+}
+
+@keyframes computerNormalAttack {
+    0% {
+        background-position: 0%;
+    }
+
+    40% {
+        background-position: 1200%;
+    }
+
+    41% {
+        background-position: 0%;
+    }
+
+    80% {
+        background-position: 1200%;
+    }
+
+    100% {
+        background-position: 0%;
+    }
+}
+
+@keyframes computerNormalAttackPosition {
+    20% {
+        right: 60vw;
+    }
+
+    80% {
+        right: 60vw;
+    }
+}
+
+
+
+/* -------------------------------controller-------------------------- */
+#button-normal-attack {
+    position: absolute;
+    height: 15vh;
+    width: 15vh;
+    background: yellow;
+    bottom: 5vh;
+    right: 10vh;
+    border-radius: 10vh;
+    background: url('../skills/normal_attack.png');
+    background-size: contain;
+}
+
+#button-normal-attack:hover {
+    transform: scale(1.1);
+}
+
+#button-normal-attack:active {
+    transform: scale(0.9);
+}
+
+#button-shadow-step {
+    position: absolute;
+    height: 15vh;
+    width: 15vh;
+    background: yellow;
+    bottom: 5vh;
+    right: 30vh;
+    border-radius: 10vh;
+    background: url('../skills/shadow_step.png');
+    background-size: contain;
+}
+
+#button-shadow-step:hover {
+    transform: scale(1.1);
+}
+
+#button-shadow-step:active {
+    transform: scale(0.9);
+}
+
+#button-magic-fire {
+    position: absolute;
+    height: 15vh;
+    width: 15vh;
+    background: yellow;
+    bottom: 5vh;
+    right: 50vh;
+    border-radius: 10vh;
+    background: url('../skills/magic_fire.png');
+    background-size: contain;
+}
+
+#button-magic-fire:hover {
+    transform: scale(1.1);
+}
+
+#button-magic-fire:active {
+    transform: scale(0.9);
+}
+
+#button-magic-thunder {
+    position: absolute;
+    height: 15vh;
+    width: 15vh;
+    background: yellow;
+    bottom: 5vh;
+    right: 70vh;
+    border-radius: 10vh;
+    background: url('../skills/magic_thunder.png');
+    background-size: contain;
+}
+
+#button-magic-thunder:hover {
+    transform: scale(1.1);
+}
+
+#button-magic-thunder:active {
+    transform: scale(0.9);
+}
+
+#button-dragon-killer {
+    position: absolute;
+    height: 15vh;
+    width: 15vh;
+    background: yellow;
+    bottom: 5vh;
+    right: 90vh;
+    border-radius: 10vh;
+    background: url('../skills/dragon_killer.png');
+    background-size: contain;
+}
+
+#button-dragon-killer:hover {
+    transform: scale(1.1);
+}
+
+#button-dragon-killer:active {
+    transform: scale(0.9);
+}
+
+
+
+
+/* -------------------------battle report--------------------------- */
+#battle-report-background {
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(0, 0, 0, 0.7);
+    top: 0;
+    display: none;
+}
+
+#battle-report-container {
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+    justify-content: center;
+    align-items: center;
+}
+
+#battle-report-message {
+    position: absolute;
+    height: 60vh;
+    width: 100vh;
+    background-color: rgb(148, 99, 0);
+    border: solid rgb(255, 8, 0) 3px;
+    border-radius: 3vh;
+}
+
+#battle-report-message-container {
+    display: flex;
+    height: 60vh;
+    width: 100vh;
+    justify-content: center;
+}
+
+#battle-report-result {
+    color: yellow;
+    font-size: 3em;
+    margin-top: 3vh;
+}
+
+#battle-report-exp-container {
+    position: absolute;
+    color: yellow;
+    font-size: 1em;
+    top: 40%;
+}
+
+#back {
+    position: absolute;
+    bottom: 10%;
+}
+
+#back-to-stages {
+    height: 10vh;
+    width: 30vh;
+    border-radius: 10vh;
+    background-color: rgb(173, 74, 4);
+    border: solid rgb(195, 255, 0) 2px;
+    color: yellow;
+}
+
+#back-to-stages:hover {
+    transform: scale(1.1);
+}
+
+#back-to-stages:active {
+    transform: scale(0.8);
+}
+
+
+#home {
+    position: absolute;
+    top: 0vh;
+    left: calc(50% - 20vh/2);
+
+}
+
+#home-button {
+    position: absolute;
+    height: 20vh;
+    width: 20vh;
+    background-color: rgba(89, 89, 89, 0.524);
+    color: gray;
+    border-radius: 30vh;
+}
+
+#home-button:hover {
+    transform: scale(1.1);
+}
+
+#home-button:active {
+    transform: scale(0.9);
+}
